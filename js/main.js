@@ -55,6 +55,9 @@ createApp({
             if (newValue > this.pujas[this.pujas.length - 1].cantidad) {
                 // Bloquear pasa a ser false, por lo que se habilita el botón
                 this.bloquear = false;
+            } else {
+                // Si se borra y/o se escribe otra cifra menor, vuelve a bloquear el botón
+                this.bloquear = true;
             }
         }
     },
